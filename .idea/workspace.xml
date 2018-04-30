@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+
+    <list default="true" id="c7a9d080-112c-4c7e-8c60-a6390f9fbafb" name="Default" comment="" />
+=======
     <list default="true" id="c7a9d080-112c-4c7e-8c60-a6390f9fbafb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/com/tec/datos1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tec/datos1/Main.java" afterDir="false" />
     </list>
+
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,6 +23,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+
+
+            <state relative-caret-position="34">
+              <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+
+            <state relative-caret-position="85">
+              <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="8" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -170,13 +181,25 @@
       <option name="presentableId" value="Default" />
       <updated>1524635755450</updated>
       <workItem from="1524635759673" duration="551000" />
+      <workItem from="1525066952583" duration="293000" />
+=======
       <workItem from="1524721498327" duration="766000" />
       <workItem from="1525067321410" duration="1638000" />
+=======
+      <workItem from="1525067321410" duration="1284000" />
+=======
+      <workItem from="1525067321410" duration="255000" />
+
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="3026000" />
+    <option name="totallyTimeSpent" value="2672000" />
+
+    <option name="totallyTimeSpent" value="874000" />
+    <option name="totallyTimeSpent" value="1643000" />
+
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1537" height="916" extended-state="6" />
@@ -274,6 +297,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+=======
+
+        <state relative-caret-position="34">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="85">
+          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -281,6 +310,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+=======
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+
         </state>
       </provider>
     </entry>
