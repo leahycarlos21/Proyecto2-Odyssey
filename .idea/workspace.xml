@@ -5,8 +5,7 @@
     <list default="true" id="c7a9d080-112c-4c7e-8c60-a6390f9fbafb" name="Default" comment="" />
 =======
     <list default="true" id="c7a9d080-112c-4c7e-8c60-a6390f9fbafb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/tec/datos1/ConnectionClient/ConnectionClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tec/datos1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tec/datos1/Main.java" afterDir="false" />
     </list>
 
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,20 +18,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+
 
             <state relative-caret-position="34">
               <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-=======
+
             <state relative-caret-position="85">
               <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="8" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionClient.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConnectionClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/ConnectionClient/ConnectionClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -65,8 +67,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/tec/datos1/Main.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/com/tec/datos1/Main.java" />
       </list>
     </option>
   </component>
@@ -182,6 +184,8 @@
       <workItem from="1525066952583" duration="293000" />
 =======
       <workItem from="1524721498327" duration="766000" />
+      <workItem from="1525067321410" duration="1638000" />
+=======
       <workItem from="1525067321410" duration="1284000" />
 =======
       <workItem from="1525067321410" duration="255000" />
@@ -190,6 +194,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3026000" />
     <option name="totallyTimeSpent" value="2672000" />
 
     <option name="totallyTimeSpent" value="874000" />
@@ -288,8 +293,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/ConnectionClient/ConnectionClient.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+=======
 
         <state relative-caret-position="34">
           <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
@@ -298,8 +306,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/ConnectionClient/ConnectionClient.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+=======
         <state relative-caret-position="68">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         <state relative-caret-position="374">
