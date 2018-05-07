@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c7a9d080-112c-4c7e-8c60-a6390f9fbafb" name="Default" comment="" />
+=======
+    <list default="true" id="c7a9d080-112c-4c7e-8c60-a6390f9fbafb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/Proyecto2-Odyssey.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2-Odyssey.iml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/com/tec/datos1/FuncionesServer/CancionAlmacenaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tec/datos1/FuncionesServer/CancionAlmacenaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tec/datos1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tec/datos1/Main.java" afterDir="false" />
+>>>>>>> 53c81bc450dde6367b8da08255cc1ad2563595c8
+    </list>
+>>>>>>> d4979bad68c975f3b10c3fca34484608cf26b1cc
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,32 +38,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="34">
               <caret line="29" selection-start-line="29" selection-end-line="29" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="136">
+              <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+=======
+            <state relative-caret-position="-38">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+>>>>>>> d4979bad68c975f3b10c3fca34484608cf26b1cc
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+>>>>>>> 53c81bc450dde6367b8da08255cc1ad2563595c8
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
               <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="Canciones.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/XMLCancion/Canciones.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+=======
       <file leaf-file-name="Mensajes.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Mensajes.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+>>>>>>> 53c81bc450dde6367b8da08255cc1ad2563595c8
+>>>>>>> d4979bad68c975f3b10c3fca34484608cf26b1cc
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="Mensajes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Mensajes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="misc.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+=======
+      <file leaf-file-name="AddDatoMensaje.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/AddDatoMensaje.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> d4979bad68c975f3b10c3fca34484608cf26b1cc
             </state>
           </provider>
         </entry>
@@ -60,9 +114,14 @@
         <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/FuncionesServer/CancionAlmacenaje.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
+<<<<<<< HEAD
               <caret line="11" selection-start-line="11" selection-end-line="11" />
+=======
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+>>>>>>> d4979bad68c975f3b10c3fca34484608cf26b1cc
             </state>
           </provider>
+>>>>>>> 53c81bc450dde6367b8da08255cc1ad2563595c8
         </entry>
       </file>
     </leaf>
@@ -89,15 +148,16 @@
         <option value="$PROJECT_DIR$/src/com/tec/datos1/ConnectionServer/TCPServer.java" />
         <option value="$PROJECT_DIR$/src/com/tec/datos1/XMLConfig/Mensajes.java" />
         <option value="$PROJECT_DIR$/src/com/tec/datos1/Canciones.java" />
-        <option value="$PROJECT_DIR$/src/com/tec/datos1/AddSongMensaje.java" />
         <option value="$PROJECT_DIR$/src/com/tec/datos1/ConnectionServer/DatosServer.java" />
         <option value="$PROJECT_DIR$/src/com/tec/datos1/XMLConfig/AddSongMensaje.java" />
         <option value="$PROJECT_DIR$/src/com/tec/datos1/FuncionesServer/CancionAlmacenar.java" />
-        <option value="$PROJECT_DIR$/src/com/tec/datos1/FuncionesServer/CancionAlmacenaje.java" />
         <option value="$PROJECT_DIR$/src/com/tec/datos1/Mensajes.java" />
         <option value="$PROJECT_DIR$/src/com/tec/datos1/XMLCancion/AddSongMensaje.java" />
-        <option value="$PROJECT_DIR$/src/com/tec/datos1/Main.java" />
         <option value="$PROJECT_DIR$/src/com/tec/datos1/XMLCancion/Canciones.java" />
+        <option value="$PROJECT_DIR$/src/com/tec/datos1/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/tec/datos1/FuncionesServer/CancionAlmacenaje.java" />
+        <option value="$PROJECT_DIR$/src/com/tec/datos1/AddSongMensaje.java" />
+        <option value="$PROJECT_DIR$/src/com/tec/datos1/AddDatoMensaje.java" />
       </list>
     </option>
   </component>
@@ -110,7 +170,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="753" />
     <option name="width" value="775" />
     <option name="height" value="907" />
@@ -120,9 +180,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
+=======
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+>>>>>>> d4979bad68c975f3b10c3fca34484608cf26b1cc
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,11 +224,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.idea/workspace.xml" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Downloads/dependencias/woodstox-core-5.1.0.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Datos 1/dependencias/woodstox-core-5.1.0.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -225,28 +292,56 @@
       <workItem from="1525399591952" duration="12864000" />
       <workItem from="1525494367567" duration="4310000" />
       <workItem from="1525561763827" duration="4903000" />
+<<<<<<< HEAD
       <workItem from="1525661776732" duration="3719000" />
+      <workItem from="1525667180332" duration="1602000" />
+=======
+      <workItem from="1525661776732" duration="5450000" />
+      <workItem from="1525670192264" duration="86000" />
+      <workItem from="1525670728177" duration="622000" />
+>>>>>>> 53c81bc450dde6367b8da08255cc1ad2563595c8
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="34336000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="35925000" />
+>>>>>>> d4979bad68c975f3b10c3fca34484608cf26b1cc
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+=======
+    <option name="totallyTimeSpent" value="36762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="753" y="0" width="775" height="907" extended-state="0" />
-    <editor active="true" />
+>>>>>>> 53c81bc450dde6367b8da08255cc1ad2563595c8
     <layout>
-      <window_info anchor="right" id="PlantUML" order="3" />
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32457292" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297587" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3285151" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.4027972" />
       <window_info anchor="right" id="Database" order="3" weight="0.32867134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
+<<<<<<< HEAD
+=======
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info id="simpleUML" order="2" />
@@ -255,12 +350,20 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297587" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.41398603" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3297587" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4027972" />
+>>>>>>> d4979bad68c975f3b10c3fca34484608cf26b1cc
       <window_info id="Learn" order="2" />
+>>>>>>> 53c81bc450dde6367b8da08255cc1ad2563595c8
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -287,6 +390,17 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="UI Designer" order="2" />
+=======
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="simpleUML" order="2" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="PlantUML" order="3" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Learn" order="2" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+>>>>>>> d4979bad68c975f3b10c3fca34484608cf26b1cc
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3258278" />
@@ -362,6 +476,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="119">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
@@ -395,6 +510,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+=======
+        <state relative-caret-position="748">
+          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+>>>>>>> d4979bad68c975f3b10c3fca34484608cf26b1cc
         </state>
       </provider>
     </entry>
@@ -405,6 +531,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/FuncionesServer/CancionAlmacenaje.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -443,6 +570,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/AddDatoMensaje.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+>>>>>>> d4979bad68c975f3b10c3fca34484608cf26b1cc
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -458,8 +591,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Mensajes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/AddDatoMensaje.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/FuncionesServer/CancionAlmacenaje.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+>>>>>>> 53c81bc450dde6367b8da08255cc1ad2563595c8
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/FuncionesServer/CancionAlmacenaje.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="75" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
+<<<<<<< HEAD
+=======
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -473,7 +658,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/XMLCancion/AddSongMensaje.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/AddDatoMensaje.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
@@ -484,9 +669,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+>>>>>>> 53c81bc450dde6367b8da08255cc1ad2563595c8
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/XMLCancion/Canciones.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/XMLCancion/AddSongMensaje.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Mensajes.java" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -500,9 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -519,9 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1105">
           <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -538,9 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -556,9 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -628,17 +805,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/ConnectionServer/DatosServer.java" />
     <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/ConnectionServer/TCPServer.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/FuncionesServer/CancionAlmacenaje.java">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/FuncionesServer/CancionAlmacenaje.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/XMLCancion/AddSongMensaje.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Mensajes.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="187">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/XMLCancion/AddSongMensaje.java">
+=======
+        <state relative-caret-position="136">
+          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/XMLCancion/Canciones.java">
+>>>>>>> d4979bad68c975f3b10c3fca34484608cf26b1cc
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        <state relative-caret-position="289">
+          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -649,22 +837,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/FuncionesServer/CancionAlmacenaje.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/XMLCancion/Canciones.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/AddDatoMensaje.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="4" column="9" selection-start-line="4" selection-end-line="5" />
+<<<<<<< HEAD
+        <state relative-caret-position="34">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+=======
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+>>>>>>> d4979bad68c975f3b10c3fca34484608cf26b1cc
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+>>>>>>> 53c81bc450dde6367b8da08255cc1ad2563595c8
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tec/datos1/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="34">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+=======
+        <state relative-caret-position="-38">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+>>>>>>> 53c81bc450dde6367b8da08255cc1ad2563595c8
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -706,7 +918,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
