@@ -3,7 +3,6 @@ package com.tec.datos1;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import com.tec.datos1.XMLCancion.AddSongMensaje;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -27,8 +26,9 @@ public class Main {
 
                 /** Se asigna el dato entrante al var mensajeRecibido */
                 String mensajeRecibido = reader.readLine();
+
                 /**Invoca el metodo convertirXmlStringAObject*/
-                AddSongMensaje mensaje = (AddSongMensaje) convertirXmlStringAObject(mensajeRecibido, AddSongMensaje.class);
+                AddDatoMensaje mensaje = (AddDatoMensaje) convertirXmlStringAObject(mensajeRecibido, AddDatoMensaje.class);
                 System.out.println("El codigo de operacion es " + mensaje.OpCod);
 
 
