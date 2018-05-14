@@ -5,9 +5,12 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.tec.datos1.FuncionesServer.CancionAlmacenaje;
 
+
+import javax.sound.sampled.AudioInputStream;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+
 
 public class Main {
 
@@ -75,6 +78,12 @@ public class Main {
 
         }
 
+
+
+
+
+
+
     }
 
     /**
@@ -87,6 +96,7 @@ public class Main {
         Object object = xmlMapper.readValue(xmlString, cls);
         return object;
     }
+
 
 
 }
