@@ -4,9 +4,12 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
+
+import javax.sound.sampled.AudioInputStream;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+
 
 public class Main {
     //https://dzone.com/articles/parse-xml-to-java-objects-using-jackson
@@ -63,6 +66,12 @@ public class Main {
 
         }
 
+
+
+
+
+
+
     }
 
     /**
@@ -75,6 +84,8 @@ public class Main {
         Object object = xmlMapper.readValue(xmlString, cls);
         return object;
     }
+
+
 
 }
 
