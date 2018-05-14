@@ -17,7 +17,7 @@ public class Main {
         CancionAlmacenaje almacenaje = new CancionAlmacenaje();
 
         /**Definicion del ServerSocket*/
-        ServerSocket serverSocket = new ServerSocket(5000, 10);
+        ServerSocket serverSocket = new ServerSocket(5001, 10);
         System.out.println("El servidor esta activo ....");
 
         while (true) {
