@@ -8,7 +8,7 @@ import com.tec.datos1.XMLCancion.Canciones;
  * Tiene que tener el mismo formato de la clase de C# para poder hacer el intercambio
  */
 public class AddDatoMensaje extends Mensajes {
-    public Canciones cancion;
+    public Canciones[] cancion;
    // public Usuario usuario;
 
     public AddDatoMensaje(){

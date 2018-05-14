@@ -3,6 +3,7 @@ package com.tec.datos1;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.tec.datos1.FuncionesServer.CancionAlmacenaje;
 
 
 import javax.sound.sampled.AudioInputStream;
@@ -12,9 +13,12 @@ import java.net.Socket;
 
 
 public class Main {
+
     //https://dzone.com/articles/parse-xml-to-java-objects-using-jackson
     //http://www.baeldung.com/jackson-xml-serialization-and-deserialization
     public static void main(String[] args) throws IOException {
+        CancionAlmacenaje almacenaje = new CancionAlmacenaje();
+
         /**Definicion del ServerSocket*/
         ServerSocket serverSocket = new ServerSocket(5000, 10);
         System.out.println("El servidor esta activo ....");
@@ -41,13 +45,21 @@ public class Main {
 
                 if (mensaje.OpCod.equals("01")) {
                     /**Almacenar Cancion*/
-                    System.out.println(" El artista  es " + mensaje.cancion.artista);
-                    System.out.println("la letra  es" + mensaje.cancion.letra);
-                    System.out.println("la cancion  es" + mensaje.cancion.nombreCancion);
-                    printWriter.print("Cancion recibida del Servidor");
+                   int num =0;
+                    System.out.println("largo"+mensaje.cancion.length);
+                    almacenaje.addCancionesEntrantes(mensaje.cancion);
+
+                    /*while (num<mensaje.cancion.length) {
+
+                       System.out.println(" El artista  es " + mensaje.cancion[num].artista);
+                       System.out.println("la cancion  es" + mensaje.cancion[num].nombreCancion);
+                       System.out.println("la genero  es" + mensaje.cancion[num].genero);
+                       System.out.println("la album  es" + mensaje.cancion[num].album);
+                       System.out.println("la cantidad bytes  es" + mensaje.cancion[num].bytesSong.length);
+                       printWriter.print("Cancion recibida del Servidor");
+                       num++;
+                   }*/
                     printWriter.close();
-
-
                 }
                 else if ( mensaje.OpCod.equals("02")){
                     /**Almacena un usuario*/
