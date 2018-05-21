@@ -84,6 +84,31 @@ public class ListaDoble {
         }
         return null;
     }
+    public int eliminarDato(String artista,String cancion){
+        NodoDoble auxNodo = raiz;
+        int num=1;
+        while(auxNodo != null){
+            if (auxNodo.getDato().artista.equals(artista) && auxNodo.getDato().nombreCancion.equals(cancion)){
+                eliminar(num);
+                return num;
+            }
+            auxNodo = auxNodo.siguiente;
+            num++;
+        }
+        System.out.println("Retorno nullllllllllllll");
+        return 0;
+    }
+    public Canciones obtenerDato(String artista,String cancion){
+        NodoDoble auxNodo = raiz;
+        while(auxNodo != null){
+            if (auxNodo.getDato().artista.equals(artista) && auxNodo.getDato().nombreCancion.equals(cancion)){
+                return auxNodo.getDato();
+            }
+            auxNodo = auxNodo.siguiente;
+        }
+        System.out.println("Retorno nullllllllllllll");
+        return null;
+    }
 
     public void imprimir() {
         NodoDoble auxNodo = raiz;

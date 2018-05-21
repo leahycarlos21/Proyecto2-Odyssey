@@ -1,7 +1,7 @@
 package com.tec.datos1;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.tec.datos1.FuncionesServer.CancionAlmacenaje;
 
@@ -18,6 +18,7 @@ public class Main {
     //http://www.baeldung.com/jackson-xml-serialization-and-deserialization
     public static void main(String[] args) throws IOException {
         CancionAlmacenaje almacenaje = new CancionAlmacenaje();
+
 
         /**Definicion del ServerSocket*/
         ServerSocket serverSocket = new ServerSocket(5000, 10);
@@ -39,15 +40,19 @@ public class Main {
                 System.out.println("El codigo de operacion es " + mensaje.OpCod);
 
 
-
                 /**EL objeto para enviar algo al servidor*/
                 PrintWriter printWriter = new PrintWriter(clienteSocket.getOutputStream(), true);
 
                 if (mensaje.OpCod.equals("01")) {
                     /**Almacenar Cancion*/
-                   int num =0;
-                    System.out.println("largo"+mensaje.cancion.length);
+                    int num = 0;
+                    //  System.out.print("---------"+mensaje.cancion[0].nombreCancion);
+
                     almacenaje.addCancionesEntrantes(mensaje.cancion);
+                    //  System.out.print(mensaje.cancion[0].bytesSong);
+
+                    printWriter.print("Cancion recibida del Servidor");
+                    printWriter.close();
 
                     /*while (num<mensaje.cancion.length) {
 
@@ -59,18 +64,57 @@ public class Main {
                        printWriter.print("Cancion recibida del Servidor");
                        num++;
                    }*/
-                    printWriter.close();
-                }
-                else if ( mensaje.OpCod.equals("02")){
+
+                } else if (mensaje.OpCod.equals("02")) {
                     /**Almacena un usuario*/
 
+                } else if (mensaje.OpCod.equals("03")) {
+                    AddDatoMensaje enviarDatin = new AddDatoMensaje();
+
+                    enviarDatin.cancion = almacenaje.enviarTodaCanciones(mensaje.cantidadTotalSong);
+                    // enviarDatin.cantidadTotalSong = 0;
+                    System.out.println(almacenaje.largocanciones());
+                    enviarDatin.cantidadTotalSong = almacenaje.largocanciones();
+
+
+                    enviarDatin.OpCod = "03";
+
+                    // String enviar = write2XMLString(enviarDato.cancion);
+                    String enviar = whenJavaSerializedToXmlStr_thenCorrect(enviarDatin.cancion);
+                    enviar = enviar.replaceAll("\n", "").replaceAll("\r", "").replaceAll("Cancioneses",
+                            "Canciones").replaceAll("<item>", "<Canciones>").replaceAll("</item>", "</Canciones>");
+
+                    printWriter.println(enviar);
+                    printWriter.close();
+                } else if (mensaje.OpCod.equals("04")) {
+                    AddDatoMensaje enviarDatis = new AddDatoMensaje();
+
+                    enviarDatis.cancion = almacenaje.enviarCancionSolicitad(mensaje.cancion[0].artista, mensaje.cancion[0].nombreCancion);
+                    enviarDatis.OpCod = "04";
+                    System.out.println("la vara es" + enviarDatis.cancion[0].bytesSong);
+                    String enviaris = whenJavaSerializedToXmlStr_thenCorrect(enviarDatis.cancion);
+                    //String enviaris = whenJavaSerializedToXmlStr_thenCorrect(enviarDatis.cancion);
+
+                    enviaris = enviaris.replaceAll("\n", "").replaceAll("\r", "").replaceAll("Cancioneses",
+                            "Canciones").replaceAll("<item>", "<Canciones>").replaceAll("</item>", "</Canciones>");
+                    //System.out.print("---" + enviaris);
+
+                    printWriter.println(enviaris);
+
+                    printWriter.close();
+                } else if (mensaje.OpCod.equals("05")) {
+                    almacenaje.eliminarCancion(mensaje.cancion);
+                    printWriter.println("Canción eliminada");
+
+
+                } else {
+                    System.out.print("whut");
                 }
 
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
 
 
             clienteSocket.close();
@@ -90,11 +134,27 @@ public class Main {
      * http://javasampleapproach.com/java/jackson-convert-java-xml-file-xml-string
      */
     public static Object convertirXmlStringAObject(String xmlString, Class<?> cls)
-            throws JsonParseException, JsonMappingException, IOException {
+            throws IOException {
 
         XmlMapper xmlMapper = new XmlMapper();
         Object object = xmlMapper.readValue(xmlString, cls);
         return object;
+    }
+
+    public static String write2XMLString(Object object)
+            throws JsonProcessingException {
+
+        XmlMapper xmlMapper = new XmlMapper();
+        // use the line of code for pretty-print XML on console. We should remove it in production.
+        xmlMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+        return xmlMapper.writeValueAsString(object);
+    }
+
+    public static String whenJavaSerializedToXmlStr_thenCorrect(Object object) throws JsonProcessingException {
+        XmlMapper xmlMapper = new XmlMapper();
+        String xml = xmlMapper.writeValueAsString(object);
+        return xml;
     }
 
 
