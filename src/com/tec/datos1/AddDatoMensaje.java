@@ -1,5 +1,8 @@
 package com.tec.datos1;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlText;
 import com.tec.datos1.Mensajes;
 import com.tec.datos1.XMLCancion.Canciones;
 
@@ -9,6 +12,7 @@ import com.tec.datos1.XMLCancion.Canciones;
  */
 public class AddDatoMensaje extends Mensajes {
     public Canciones[] cancion;
+    public int cantidadTotalSong;
    // public Usuario usuario;
 
     public AddDatoMensaje(){
