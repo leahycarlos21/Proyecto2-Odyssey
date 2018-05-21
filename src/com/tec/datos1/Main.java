@@ -3,7 +3,9 @@ package com.tec.datos1;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.tec.datos1.ArbolAVL.AVLNode;
 import com.tec.datos1.FuncionesServer.CancionAlmacenaje;
+import com.tec.datos1.ArbolAVL.ArbolAVL;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -59,8 +61,17 @@ public class Main {
                     printWriter.close();
                 }
                 else if ( mensaje.OpCod.equals("02")){
-                    /**Almacena un usuario*/
-
+                    System.out.println("entro");
+                    System.out.println(mensaje.usuario.nombre);
+                    System.out.println(mensaje.usuario.apellido);
+                    System.out.println(mensaje.usuario.edad);
+                    System.out.println(mensaje.usuario.id);
+                    System.out.println(mensaje.usuario.password);
+                }
+                else if (mensaje.OpCod.equals("06")){
+                    System.out.println("entro");
+                    System.out.println(mensaje.usuario.id);
+                    System.out.println(mensaje.usuario.password);
                 }
 
 
@@ -74,8 +85,8 @@ public class Main {
 
 
         }
-
     }
+
 
     /**
      * http://javasampleapproach.com/java/jackson-convert-java-xml-file-xml-string

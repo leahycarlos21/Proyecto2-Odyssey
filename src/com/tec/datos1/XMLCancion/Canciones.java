@@ -10,6 +10,7 @@ public class Canciones {
     public String genero;
     public String letra;
     public byte[] bytesSong;
+    public int id;
 
     public Canciones(){
 
