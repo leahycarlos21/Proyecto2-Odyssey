@@ -10,7 +10,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../../../Downloads/dependencias/jackson-annotations-2.9.5.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Datos 1/dependencias/woodstox-core-5.1.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -19,7 +19,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../../../Downloads/dependencias/jackson-core-2.9.5.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Datos 1/dependencias/stax2-api-4.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -28,7 +28,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../../../Downloads/dependencias/jackson-databind-2.9.5.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Datos 1/dependencias/jackson-module-jaxb-annotations-2.9.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -37,7 +37,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../../../Downloads/dependencias/jackson-dataformat-xml-2.9.5.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Datos 1/dependencias/jackson-dataformat-xml-2.9.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -46,7 +46,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../../../Downloads/dependencias/jackson-module-jaxb-annotations-2.9.5.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Datos 1/dependencias/jackson-databind-2.9.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -55,7 +55,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../../../Downloads/dependencias/stax2-api-4.1.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Datos 1/dependencias/jackson-core-2.9.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -64,7 +64,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../../../Downloads/dependencias/woodstox-core-5.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Datos 1/dependencias/jackson-annotations-2.9.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
