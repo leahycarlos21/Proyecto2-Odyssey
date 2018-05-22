@@ -55,14 +55,14 @@ public class Main {
                        System.out.println("la genero  es" + mensaje.cancion[num].genero);
                        System.out.println("la album  es" + mensaje.cancion[num].album);
                        System.out.println("la cantidad bytes  es" + mensaje.cancion[num].bytesSong.length);
-                       printWriter.print("Cancion recibida del Servidor");
-                       num++;
-                   }*/
-                    printWriter.close();
-                }
+                    printWriter.print("Cancion recibida del Servidor");
+                    num++;
+                }*/
+                printWriter.close();
+            }
                 else if ( mensaje.OpCod.equals("02")){
-                    System.out.println("entro");
-                    System.out.println(mensaje.usuario.nombre);
+                System.out.println("entro");
+                System.out.println(mensaje.usuario.nombre);
                     System.out.println(mensaje.usuario.apellido);
                     System.out.println(mensaje.usuario.edad);
                     System.out.println(mensaje.usuario.id);
