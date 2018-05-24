@@ -6,6 +6,9 @@ public class Usuario {
     public String nombre;
     public String apellido;
     public String edad;
+    public Usuario hojaIzquierda;
+    public Usuario hojaDerecha;
+
 
     public Usuario(String id, String password, String nombre, String apellido, String edad){
         this.id = id;
@@ -56,5 +59,20 @@ public class Usuario {
 
     public void setEdad(String edad) {
         this.edad = edad;
+    }
+    public Usuario getHojaIzquierda() {
+        return hojaIzquierda;
+    }
+
+    public void setHojaIzquierda(Usuario hojaIzquierda) {
+        this.hojaIzquierda = hojaIzquierda;
+    }
+
+    public Usuario getHojaDerecha() {
+        return hojaDerecha;
+    }
+
+    public void setHojaDerecha(Usuario hojaDerecha) {
+        this.hojaDerecha = hojaDerecha;
     }
 }

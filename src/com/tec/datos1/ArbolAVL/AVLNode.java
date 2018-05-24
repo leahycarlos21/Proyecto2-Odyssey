@@ -3,14 +3,15 @@ import com.tec.datos1.XMLCancion.Canciones;
 
 public class AVLNode {
 
-   public int data;
-   public AVLNode right;
-   public AVLNode left;
-   public int altura;
+    public int data;
+    public AVLNode left;
+    public AVLNode right;
+    public int height;
 
-   public AVLNode(int data){
-
-   }
+    public AVLNode(int data) {
+        this.data = data;
+        height = 1;
+    }
 
     public int getData() {
         return data;
@@ -18,14 +19,6 @@ public class AVLNode {
 
     public void setData(int data) {
         this.data = data;
-    }
-
-    public AVLNode getRight() {
-        return right;
-    }
-
-    public void setRight(AVLNode right) {
-        this.right = right;
     }
 
     public AVLNode getLeft() {
@@ -36,11 +29,21 @@ public class AVLNode {
         this.left = left;
     }
 
-    public int getAltura() {
-        return altura;
+    public AVLNode getRight() {
+        return right;
     }
 
-    public void setAltura(int altura) {
-        this.altura = altura;
+    public void setRight(AVLNode right) {
+        this.right = right;
     }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+
 }
