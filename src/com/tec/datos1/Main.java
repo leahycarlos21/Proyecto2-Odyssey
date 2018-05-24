@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.tec.datos1.FuncionesServer.CancionAlmacenaje;
+import org.jmusixmatch.MusixMatchException;
 
 
 import javax.sound.sampled.AudioInputStream;
@@ -107,7 +108,20 @@ public class Main {
                     printWriter.println("Canción eliminada");
 
 
-                } else {
+                } else if (mensaje.OpCod.equals("06")) {//06
+                    almacenaje.editarCancion(mensaje.cancion);
+                    printWriter.println("Canción editada");
+
+                }else if (mensaje.OpCod.equals("07")) {
+                    try {
+                        almacenaje.editarMusixMatch(mensaje.cancion);
+                    } catch (MusixMatchException e) {
+                        e.printStackTrace();
+                    }
+                    printWriter.println("Canción editada");
+
+                }
+                else {
                     System.out.print("whut");
                 }
 
@@ -121,11 +135,6 @@ public class Main {
 
 
         }
-
-
-
-
-
 
 
     }
@@ -156,7 +165,6 @@ public class Main {
         String xml = xmlMapper.writeValueAsString(object);
         return xml;
     }
-
 
 
 }
