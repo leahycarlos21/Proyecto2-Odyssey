@@ -3,6 +3,11 @@ package com.tec.datos1.FuncionesServer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tec.datos1.ListaCanciones.ListaDoble;
 import com.tec.datos1.XMLCancion.Canciones;
+import org.jmusixmatch.MusixMatch;
+import org.jmusixmatch.MusixMatchException;
+import org.jmusixmatch.entity.lyrics.Lyrics;
+import org.jmusixmatch.entity.track.Track;
+import org.jmusixmatch.entity.track.TrackData;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,7 +16,8 @@ public class CancionAlmacenaje {
     private ListaDoble listaCanciones = new ListaDoble();
     private File archivo = new File("Canciones.json");
     private Canciones[] canciones;
-
+    String apiKey = "f49c29ea71404d6b85b6b514d19df23e";
+    MusixMatch musixMatch = new MusixMatch(apiKey);
     public CancionAlmacenaje() {
 
         try {
@@ -34,6 +40,35 @@ public class CancionAlmacenaje {
 
 
         return listaenviar;
+    }
+
+    public void editarCancion(Canciones[] listEdit) throws IOException {
+        eliminarCancion(listEdit[0]);
+
+        Canciones[] auxArray = new Canciones[1];
+        auxArray[0]=listEdit[1];
+        addCancionesEntrantes(auxArray);
+
+    }
+
+    public void editarMusixMatch (Canciones[] cancionEntrante) throws MusixMatchException {
+        String cancionNombre = cancionEntrante[0].nombreCancion;
+        String artistNombre = cancionEntrante[0].artista;
+
+        Track datosCancion = musixMatch.getMatchingTrack(cancionNombre,artistNombre);
+        TrackData data = datosCancion.getTrack();
+        System.out.println("AlbumID : "    + data.getAlbumId());
+        System.out.println("Album Name : " + data.getAlbumName());
+        System.out.println("Artist ID : "  + data.getArtistId());
+        System.out.println("Artist Name : " + data.getArtistName());
+        System.out.println("Track ID : "   + data.getTrackId());
+
+
+        int CancionID = data.getTrackId();
+        Lyrics letra = musixMatch.getLyrics(CancionID);
+        System.out.println("Lyrics Body     : "     + letra.getLyricsBody());
+        System.out.println("Lyrics Body     : " + letra.getLyricsLang());
+
     }
 
     public Canciones[] enviarTodaCanciones() {
@@ -81,15 +116,7 @@ public class CancionAlmacenaje {
             posicion++;
             num++;
         }
-       /* cancionis[0]=canciones[posicion];
-        cancionis[1]=canciones[posicion+1];
-        cancionis[2]=canciones[posicion+2];*/
 
-
-       /* cancionis[0]=list.obtenerDato(posicion);
-        cancionis[1]=list.obtenerDato(posicion+1);
-        cancionis[2]=list.obtenerDato(posicion+2);
-*/
         return cancionis;
 
     }
@@ -113,7 +140,14 @@ public class CancionAlmacenaje {
         // listaCanciones.imprimir();
 
     }
-
+    private void sincronizarListaToArray(){
+         canciones= new Canciones[listaCanciones.cantidad()];
+        int num = 0;
+        while (num < canciones.length) {
+            canciones[num] = listaCanciones.obtenerDato(num + 1);
+            num++;
+        }
+    }
     private void sincronizarJsonToLista() throws IOException {
         ObjectMapper objectmapper = new ObjectMapper();
 
@@ -136,6 +170,7 @@ public class CancionAlmacenaje {
     }
 
     private void sincronizarListaToJson() throws IOException {
+        sincronizarListaToArray();
         ObjectMapper objectmapper = new ObjectMapper();
 
         Canciones[] cancionesaJson = new Canciones[listaCanciones.cantidad()];
@@ -148,10 +183,14 @@ public class CancionAlmacenaje {
 
     }
 
+    public void eliminarCancion(Canciones cancion) throws IOException {
+        listaCanciones.eliminarDato(cancion.artista, cancion.nombreCancion);
+        sincronizarListaToJson();
+    }
     public void eliminarCancion(Canciones[] cancion) throws IOException {
         listaCanciones.eliminarDato(cancion[0].artista, cancion[0].nombreCancion);
         sincronizarListaToJson();
-        sincronizarJsonToLista();
+
     }
 
     public int largocanciones() {
