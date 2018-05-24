@@ -3,7 +3,7 @@ package com.tec.datos1.ArbolSplay;
 public class SplayTree {
     public SplayNode root;
     public int count = 0;
-    //INSERTAR UN ELEMENTO AL ARBOL, DEBE SER UN NUMERO
+    //INSERTAR UN ELEMENTO AL ARBOL, DEBE SER UN NUMERO.
     public void insert(int data)
     {
         SplayNode z = root;
