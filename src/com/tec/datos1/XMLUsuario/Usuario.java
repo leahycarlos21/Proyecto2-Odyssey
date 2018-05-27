@@ -8,6 +8,7 @@ public class Usuario {
     public String edad;
     public Usuario hojaIzquierda;
     public Usuario hojaDerecha;
+    //public  [] mensajes;
 
 
     public Usuario(String id, String password, String nombre, String apellido, String edad){
@@ -21,11 +22,18 @@ public class Usuario {
 
     }
 
+    public Usuario(String id){
+        this.id = id;
+
+    }
+
     public String getId() {
+
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(String id)
+    {
         this.id = id;
     }
 
@@ -60,6 +68,7 @@ public class Usuario {
     public void setEdad(String edad) {
         this.edad = edad;
     }
+
     public Usuario getHojaIzquierda() {
         return hojaIzquierda;
     }

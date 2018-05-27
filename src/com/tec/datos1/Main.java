@@ -3,9 +3,8 @@ package com.tec.datos1;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import com.tec.datos1.ArbolAVL.AVLNode;
 import com.tec.datos1.FuncionesServer.CancionAlmacenaje;
-import com.tec.datos1.ArbolAVL.ArbolAVL;
+import com.tec.datos1.FuncionesServer.UsuarioAlmacenaje;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -17,6 +16,7 @@ public class Main {
     //http://www.baeldung.com/jackson-xml-serialization-and-deserialization
     public static void main(String[] args) throws IOException {
         CancionAlmacenaje almacenaje = new CancionAlmacenaje();
+        UsuarioAlmacenaje almaceajeUsuario =  new UsuarioAlmacenaje();
 
         /**Definicion del ServerSocket*/
         ServerSocket serverSocket = new ServerSocket(5001, 10);
@@ -63,10 +63,12 @@ public class Main {
                 else if ( mensaje.OpCod.equals("02")){
                 System.out.println("entro");
                 System.out.println(mensaje.usuario.nombre);
-                    System.out.println(mensaje.usuario.apellido);
-                    System.out.println(mensaje.usuario.edad);
-                    System.out.println(mensaje.usuario.id);
-                    System.out.println(mensaje.usuario.password);
+                System.out.println(mensaje.usuario.apellido);
+                System.out.println(mensaje.usuario.edad);
+                System.out.println(mensaje.usuario.id);
+                System.out.println(mensaje.usuario.password);
+                almaceajeUsuario.addUsuarioEntrante(mensaje.usuario);
+
                 }
                 else if (mensaje.OpCod.equals("06")){
                     System.out.println("entro");
