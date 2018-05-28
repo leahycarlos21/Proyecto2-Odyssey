@@ -5,6 +5,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlText;
 import com.tec.datos1.Mensajes;
 import com.tec.datos1.XMLCancion.Canciones;
+import com.tec.datos1.XMLUsuario.Usuario;
 
 /**
  *Clase necesaria para crear el objeto del XML recbido
@@ -13,8 +14,7 @@ import com.tec.datos1.XMLCancion.Canciones;
 public class AddDatoMensaje extends Mensajes {
     public Canciones[] cancion;
     public int cantidadTotalSong;
-   // public Usuario usuario;
-
+    public Usuario usuario;
     public AddDatoMensaje(){
 
     }

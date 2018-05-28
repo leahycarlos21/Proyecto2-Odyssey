@@ -6,18 +6,15 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.tec.datos1.FuncionesServer.CancionAlmacenaje;
 import org.jmusixmatch.MusixMatchException;
 
-
-import javax.sound.sampled.AudioInputStream;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-
 public class Main {
 
     //https://dzone.com/articles/parse-xml-to-java-objects-using-jackson
-    //http://www.baeldung.com/jackson-xml-serialization-and-deserialization
-    public static void main(String[] args) throws IOException {
+    //http://www.baeldung.c om/jackson-xml-serialization-and-deserialization
+    public static void main(String[] args) throws Exception {
         CancionAlmacenaje almacenaje = new CancionAlmacenaje();
 
 
@@ -43,6 +40,7 @@ public class Main {
 
                 /**EL objeto para enviar algo al servidor*/
                 PrintWriter printWriter = new PrintWriter(clienteSocket.getOutputStream(), true);
+                System.out.println(mensaje.OpCod + "code");
 
                 if (mensaje.OpCod.equals("01")) {
                     /**Almacenar Cancion*/
@@ -50,31 +48,25 @@ public class Main {
                     //  System.out.print("---------"+mensaje.cancion[0].nombreCancion);
 
                     almacenaje.addCancionesEntrantes(mensaje.cancion);
-                    //  System.out.print(mensaje.cancion[0].bytesSong);
 
                     printWriter.print("Cancion recibida del Servidor");
                     printWriter.close();
 
-                    /*while (num<mensaje.cancion.length) {
-
-                       System.out.println(" El artista  es " + mensaje.cancion[num].artista);
-                       System.out.println("la cancion  es" + mensaje.cancion[num].nombreCancion);
-                       System.out.println("la genero  es" + mensaje.cancion[num].genero);
-                       System.out.println("la album  es" + mensaje.cancion[num].album);
-                       System.out.println("la cantidad bytes  es" + mensaje.cancion[num].bytesSong.length);
-                       printWriter.print("Cancion recibida del Servidor");
-                       num++;
-                   }*/
 
                 } else if (mensaje.OpCod.equals("02")) {
                     /**Almacena un usuario*/
+                    System.out.println("entro");
+                    System.out.println(mensaje.usuario.nombre);
+                    System.out.println(mensaje.usuario.apellido);
+                    System.out.println(mensaje.usuario.edad);
+                    System.out.println(mensaje.usuario.id);
+                    System.out.println(mensaje.usuario.password);
+
 
                 } else if (mensaje.OpCod.equals("03")) {
                     AddDatoMensaje enviarDatin = new AddDatoMensaje();
 
                     enviarDatin.cancion = almacenaje.enviarTodaCanciones(mensaje.cantidadTotalSong);
-                    // enviarDatin.cantidadTotalSong = 0;
-                    System.out.println(almacenaje.largocanciones());
                     enviarDatin.cantidadTotalSong = almacenaje.largocanciones();
 
 
@@ -87,7 +79,13 @@ public class Main {
 
                     printWriter.println(enviar);
                     printWriter.close();
+                } else if (mensaje.OpCod.equals("14")) {
+                    System.out.print(mensaje.cancion[0].nombreCancion + mensaje.cancion[0].artista);
+
+
                 } else if (mensaje.OpCod.equals("04")) {
+                    System.out.print("---Entro");
+
                     AddDatoMensaje enviarDatis = new AddDatoMensaje();
 
                     enviarDatis.cancion = almacenaje.enviarCancionSolicitad(mensaje.cancion[0].artista, mensaje.cancion[0].nombreCancion);
@@ -98,7 +96,6 @@ public class Main {
 
                     enviaris = enviaris.replaceAll("\n", "").replaceAll("\r", "").replaceAll("Cancioneses",
                             "Canciones").replaceAll("<item>", "<Canciones>").replaceAll("</item>", "</Canciones>");
-                    //System.out.print("---" + enviaris);
 
                     printWriter.println(enviaris);
 
@@ -112,18 +109,24 @@ public class Main {
                     almacenaje.editarCancion(mensaje.cancion);
                     printWriter.println("Canción editada");
 
-                }else if (mensaje.OpCod.equals("07")) {
+                } else if (mensaje.OpCod.equals("07")) {
                     try {
                         almacenaje.editarMusixMatch(mensaje.cancion);
                     } catch (MusixMatchException e) {
                         e.printStackTrace();
                     }
                     printWriter.println("Canción editada");
-
+                } else if (mensaje.OpCod.equals("8.1")) {
+                    almacenaje.bubbleSort();
+                } else if (mensaje.OpCod.equals("8.2")) {
+                    almacenaje.QuickSort();
+                }else if (mensaje.OpCod.equals("8.3")) {
+                    almacenaje.RadixSort();
                 }
                 else {
                     System.out.print("whut");
                 }
+                clienteSocket.close();
 
 
             } catch (IOException e) {
@@ -135,7 +138,6 @@ public class Main {
 
 
         }
-
 
     }
 

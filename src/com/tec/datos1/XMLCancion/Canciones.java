@@ -16,6 +16,7 @@ public class Canciones {
     public String letra;
     public byte[] bytesSong;
     public int ID;
+    public int puntaje;
 
     public Canciones(){
 
