@@ -5,18 +5,19 @@ import com.tec.datos1.ListaCanciones.ListaDoble;
 import com.tec.datos1.XMLUsuario.Usuario;
 import java.io.File;
 import java.io.IOException;
+import java.time.Clock;
 
 public class UsuarioAlmacenaje {
     ArbolBinarioBusqueda arbolUsuario = new ArbolBinarioBusqueda();
-    File archivo = new File("Usuarios.json");
+    File archivoUsuario = new File("Usuarios.json");
     ObjectMapper objectmapper = new ObjectMapper();
-    Usuario usuario;
+    Usuario[] usuarios;
 
     public UsuarioAlmacenaje() throws IOException {
 
         try {
-            //sincronizarJsonToLista();
-            //listaCanciones.imprimir();
+            sincronizarJsonToArbol();
+            arbolUsuario.inOrden(arbolUsuario.getRaiz());
         }catch(Exception e){
 
         }
@@ -30,37 +31,39 @@ public class UsuarioAlmacenaje {
         arbolUsuario.addNodo(usuarioEntrante);
         //sincronizarArbolToJson();
         arbolUsuario.inOrden(arbolUsuario.raiz);
+        sincronizarArbolToJson();
         }
 
 
 
+
+
+    private void sincronizarArbolToJson() throws IOException {
+        ObjectMapper objectmapper = new ObjectMapper();
+        Usuario[] usuarioArbol = arbolUsuario.arbolToArrayAux(arbolUsuario.getRaiz());
+        System.out.println(usuarioArbol[0].nickName);
+        objectmapper.writeValue(archivoUsuario, usuarioArbol);
     }
 
-    //private void sincronizarJsonToArbol() throws IOException {
-    //    Usuarios usuarios = objectmapper.readValue(archivo, usuario.class);
-    //    for (int i = 0; i < canciones.length; i++) {
-      //      listaCanciones.insertar(1, canciones[i]);
-        //}
-    //}
+    private void sincronizarJsonToArbol() throws IOException {
+        Usuario[] usuarios = objectmapper.readValue(archivoUsuario, Usuario[].class);
+        for (int i = 0; i < usuarios.length; i++) {
+            arbolUsuario.addNodo(usuarios[i]);
+        }
+    }
 
-    //private void sincronizarArbolToJson() throws IOException {
-      //  Canciones[] cancionesLista = new Canciones[listaCanciones.cantidad()];
-       // int num = 0;
-       // while (num < cancionesLista.length) {
-         //   cancionesLista[num] = listaCanciones.obtenerDato(num + 1);
-          //  num++;
-       // }
-       // objectmapper.writerWithDefaultPrettyPrinter().writeValue(archivo, cancionesLista);
+    public String search(Usuario root, String key)
+    {
+        if (root==null || root.nickName == key)
+            return root.nickName;
+        if (root.nickName.compareTo(key) > 0)
+            return search(root.getHojaIzquierda(), key);
+        return search(root.getHojaDerecha(), key);
+    }
 
-    //}
-
-    //public boolean almacenarCacion() {
-      //  boolean almacenadoExito = true;
-/**
- * Que al entrar lo convierta en Json y agregar una lista
- */
+}
 
 
-      //  return almacenadoExito;
-//    }
+
+
 

@@ -4,6 +4,8 @@ import com.tec.datos1.XMLUsuario.Usuario;
 public class ArbolBinarioBusqueda {
     /* Atributos */
     public Usuario raiz;
+    public Usuario[] arrayUsuario = new Usuario[auxCantidadArbolBB(getRaiz())];
+    public int posicionUsuario = 0;
 
     /* Contructories */
     public ArbolBinarioBusqueda(String id) {
@@ -32,13 +34,13 @@ public class ArbolBinarioBusqueda {
         if (raiz == null) {
             this.setRaiz(nodo);
         } else {
-            if (nodo.getId().equals(raiz.getId())) {
+            if (nodo.getNickName().equals(raiz.getNickName())) {
                 //Cambiar por una ventana diciendo que esta repetido y debe cambiarse a uno valido
                 System.out.println("Ya esta en el arbol");
-                System.out.println(nodo.getId());
+                System.out.println(nodo.getNickName());
 
             }
-            if (nodo.getId().compareTo(raiz.getId()) < 0) {
+            if (nodo.getNickName().compareTo(raiz.getNickName()) < 0) {
                 //System.out.println("izq" + nodo.ID);
 
                 if (raiz.getHojaIzquierda() == null) {
@@ -46,7 +48,7 @@ public class ArbolBinarioBusqueda {
                 } else {
                     addNodo2(nodo, raiz.getHojaIzquierda());
                 }
-            } else if (nodo.getId().compareTo(raiz.getId()) > 0) {
+            } else if (nodo.getNickName().compareTo(raiz.getNickName()) > 0) {
                 // System.out.println("der" + nodo.ID);
                 if (raiz.getHojaDerecha() == null) {
                     raiz.setHojaDerecha(nodo);
@@ -64,10 +66,41 @@ public class ArbolBinarioBusqueda {
     public void inOrden(Usuario usuario) {
         if (usuario != null) {
             inOrden(usuario.getHojaIzquierda());
-            System.out.print(usuario.getId() + ",");
+            System.out.print(usuario.getNickName() + ",");
             inOrden(usuario.getHojaDerecha());
         }
     }
+
+    public int auxCantidadArbolBB(Usuario usuario) {
+        return cantidadBB(usuario)/2;
+    }
+    public int cantidadBB(Usuario usuario) {
+        if(usuario == null) {
+            return 0;
+
+        }else {
+            int hijoDer=1+ cantidadBB(usuario.getHojaDerecha());
+            int hijoIzq=1+cantidadBB(usuario.getHojaIzquierda());
+            return hijoDer+hijoIzq ;
+        }
+    }
+
+    public Usuario[] arbolToArrayAux(Usuario usuario) {
+        arrayUsuario = new Usuario[auxCantidadArbolBB(getRaiz())];
+        return arbolToArray(usuario);
+    }
+    public Usuario[] arbolToArray(Usuario usuario) {
+
+        if (usuario != null) {
+            arrayUsuario[posicionUsuario] = usuario;
+            posicionUsuario++;
+            arbolToArray(usuario.getHojaIzquierda());
+            arbolToArray(usuario.getHojaDerecha());
+        }
+        return arrayUsuario;
+
+    }
+
 
 
 

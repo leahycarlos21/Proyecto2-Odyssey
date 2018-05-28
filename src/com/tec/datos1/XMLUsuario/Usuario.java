@@ -1,7 +1,7 @@
 package com.tec.datos1.XMLUsuario;
 
 public class Usuario {
-    public String id;
+    public String nickName;
     public String password;
     public String nombre;
     public String apellido;
@@ -11,8 +11,8 @@ public class Usuario {
     //public  [] mensajes;
 
 
-    public Usuario(String id, String password, String nombre, String apellido, String edad){
-        this.id = id;
+    public Usuario(String nickName, String password, String nombre, String apellido, String edad){
+        this.nickName = nickName;
         this.password = password;
         this.nombre = nombre;
         this. apellido = apellido;
@@ -23,18 +23,19 @@ public class Usuario {
     }
 
     public Usuario(String id){
-        this.id = id;
+        this.nickName= id;
 
     }
 
-    public String getId() {
+    public String getNickName() {
 
-        return id;
+        return nickName;
     }
 
-    public void setId(String id)
+    public void setNickName(String nickName)
+
     {
-        this.id = id;
+        this.nickName = nickName;
     }
 
     public String getPassword() {

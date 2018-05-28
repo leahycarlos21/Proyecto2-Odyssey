@@ -62,18 +62,14 @@ public class Main {
             }
                 else if ( mensaje.OpCod.equals("02")){
                 System.out.println("entro");
-                System.out.println(mensaje.usuario.nombre);
-                System.out.println(mensaje.usuario.apellido);
-                System.out.println(mensaje.usuario.edad);
-                System.out.println(mensaje.usuario.id);
-                System.out.println(mensaje.usuario.password);
                 almaceajeUsuario.addUsuarioEntrante(mensaje.usuario);
 
                 }
                 else if (mensaje.OpCod.equals("06")){
                     System.out.println("entro");
-                    System.out.println(mensaje.usuario.id);
-                    System.out.println(mensaje.usuario.password);
+                    
+
+
                 }
 
 
