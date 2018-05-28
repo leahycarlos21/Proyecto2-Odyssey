@@ -12,6 +12,7 @@ public class UsuarioAlmacenaje {
     File archivoUsuario = new File("Usuarios.json");
     ObjectMapper objectmapper = new ObjectMapper();
     Usuario[] usuarios;
+    Usuario root = arbolUsuario.getRaiz();
 
     public UsuarioAlmacenaje() throws IOException {
 
@@ -42,7 +43,7 @@ public class UsuarioAlmacenaje {
         ObjectMapper objectmapper = new ObjectMapper();
         Usuario[] usuarioArbol = arbolUsuario.arbolToArrayAux(arbolUsuario.getRaiz());
         System.out.println(usuarioArbol[0].nickName);
-        objectmapper.writeValue(archivoUsuario, usuarioArbol);
+        objectmapper.writerWithDefaultPrettyPrinter().writeValue(archivoUsuario, usuarioArbol);
     }
 
     private void sincronizarJsonToArbol() throws IOException {
@@ -59,6 +60,14 @@ public class UsuarioAlmacenaje {
         if (root.nickName.compareTo(key) > 0)
             return search(root.getHojaIzquierda(), key);
         return search(root.getHojaDerecha(), key);
+    }
+
+    public Usuario getRoot() {
+        return root;
+    }
+
+    public void setRoot(Usuario root) {
+        this.root = root;
     }
 
 }

@@ -65,11 +65,8 @@ public class Main {
                 almaceajeUsuario.addUsuarioEntrante(mensaje.usuario);
 
                 }
-                else if (mensaje.OpCod.equals("06")){
+                else if (mensaje.OpCod.equals("06")) {
                     System.out.println("entro");
-                    
-
-
                 }
 
 
