@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.tec.datos1.FuncionesServer.CancionAlmacenaje;
 import com.tec.datos1.FuncionesServer.UsuarioAlmacenaje;
+import com.tec.datos1.XMLUsuario.Usuario;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -19,7 +20,7 @@ public class Main {
         UsuarioAlmacenaje almaceajeUsuario =  new UsuarioAlmacenaje();
 
         /**Definicion del ServerSocket*/
-        ServerSocket serverSocket = new ServerSocket(5001, 10);
+        ServerSocket serverSocket = new ServerSocket(5000, 10);
         System.out.println("El servidor esta activo ....");
 
         while (true) {
@@ -59,6 +60,7 @@ public class Main {
                     num++;
                 }*/
                 printWriter.close();
+                //IMPORTANTE USUARIOS
             }
                 else if ( mensaje.OpCod.equals("02")){
                 System.out.println("entro");
@@ -67,8 +69,13 @@ public class Main {
                 }
                 else if (mensaje.OpCod.equals("06")) {
                     System.out.println("entro");
-                }
+                    if(almaceajeUsuario.find(mensaje.usuario.nickName, mensaje.usuario.password) == true){
+                        printWriter.print("1");
+                    }
+                    printWriter.close();
 
+                }
+                //Aqui termina usuarios
 
             } catch (IOException e) {
                 e.printStackTrace();

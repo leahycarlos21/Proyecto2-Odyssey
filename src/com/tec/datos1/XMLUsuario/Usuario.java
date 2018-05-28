@@ -8,7 +8,6 @@ public class Usuario {
     public String edad;
     public Usuario hojaIzquierda;
     public Usuario hojaDerecha;
-    //public  [] mensajes;
 
 
     public Usuario(String nickName, String password, String nombre, String apellido, String edad){

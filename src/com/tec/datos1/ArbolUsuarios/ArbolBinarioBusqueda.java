@@ -1,7 +1,7 @@
 package com.tec.datos1.ArbolUsuarios;
 import com.tec.datos1.XMLUsuario.Usuario;
 
-public class ArbolBinarioBusqueda {
+public class ArbolBinarioBusqueda{
     /* Atributos */
     public Usuario raiz;
     public Usuario[] arrayUsuario = new Usuario[auxCantidadArbolBB(getRaiz())];
@@ -35,13 +35,8 @@ public class ArbolBinarioBusqueda {
             this.setRaiz(nodo);
         } else {
             if (nodo.getNickName().equals(raiz.getNickName())) {
-                //Cambiar por una ventana diciendo que esta repetido y debe cambiarse a uno valido
-                System.out.println("Ya esta en el arbol");
-                System.out.println(nodo.getNickName());
-
             }
             if (nodo.getNickName().compareTo(raiz.getNickName()) < 0) {
-                //System.out.println("izq" + nodo.ID);
 
                 if (raiz.getHojaIzquierda() == null) {
                     raiz.setHojaIzquierda(nodo);
@@ -49,7 +44,6 @@ public class ArbolBinarioBusqueda {
                     addNodo2(nodo, raiz.getHojaIzquierda());
                 }
             } else if (nodo.getNickName().compareTo(raiz.getNickName()) > 0) {
-                // System.out.println("der" + nodo.ID);
                 if (raiz.getHojaDerecha() == null) {
                     raiz.setHojaDerecha(nodo);
                 } else {
@@ -100,6 +94,7 @@ public class ArbolBinarioBusqueda {
         return arrayUsuario;
 
     }
+
 
 
 

@@ -1,8 +1,10 @@
 package com.tec.datos1.FuncionesServer;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tec.datos1.ArbolUsuarios.ArbolBinarioBusqueda;
 import com.tec.datos1.ListaCanciones.ListaDoble;
 import com.tec.datos1.XMLUsuario.Usuario;
+
 import java.io.File;
 import java.io.IOException;
 import java.time.Clock;
@@ -12,14 +14,14 @@ public class UsuarioAlmacenaje {
     File archivoUsuario = new File("Usuarios.json");
     ObjectMapper objectmapper = new ObjectMapper();
     Usuario[] usuarios;
-    Usuario root = arbolUsuario.getRaiz();
+    public Usuario raiz;
+
 
     public UsuarioAlmacenaje() throws IOException {
 
         try {
             sincronizarJsonToArbol();
-            arbolUsuario.inOrden(arbolUsuario.getRaiz());
-        }catch(Exception e){
+        } catch (Exception e) {
 
         }
 
@@ -33,10 +35,7 @@ public class UsuarioAlmacenaje {
         //sincronizarArbolToJson();
         arbolUsuario.inOrden(arbolUsuario.raiz);
         sincronizarArbolToJson();
-        }
-
-
-
+    }
 
 
     private void sincronizarArbolToJson() throws IOException {
@@ -53,25 +52,38 @@ public class UsuarioAlmacenaje {
         }
     }
 
-    public String search(Usuario root, String key)
-    {
-        if (root==null || root.nickName == key)
-            return root.nickName;
-        if (root.nickName.compareTo(key) > 0)
-            return search(root.getHojaIzquierda(), key);
-        return search(root.getHojaDerecha(), key);
+    public ArbolBinarioBusqueda getArbolUsuario() {
+        return arbolUsuario;
     }
 
-    public Usuario getRoot() {
-        return root;
+    public void setArbolUsuario(ArbolBinarioBusqueda arbolUsuario) {
+        this.arbolUsuario = arbolUsuario;
     }
 
-    public void setRoot(Usuario root) {
-        this.root = root;
+
+    public Usuario getRaiz() {
+        return raiz;
     }
 
+    public void setRaiz(Usuario raiz) {
+        this.raiz = raiz;
+    }
+
+    public boolean find(String nickName, String password) {
+        Usuario current = arbolUsuario.getRaiz();
+        while (current != null) {
+            if (current.nickName.equals(nickName) && current.password.equals(password)) {
+                return true;
+            } else if (current.nickName.compareTo(nickName) > 0) {
+                current = current.getHojaIzquierda();
+            } else {
+                current = current.getHojaDerecha();
+            }
+
+        }
+        return false;
+    }
 }
-
 
 
 
