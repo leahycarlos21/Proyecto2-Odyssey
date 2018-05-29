@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.tec.datos1.FuncionesServer.CancionAlmacenaje;
+import com.tec.datos1.FuncionesServer.UsuarioAlmacenaje;
 import org.jmusixmatch.MusixMatchException;
 
 import java.io.*;
@@ -16,6 +17,7 @@ public class Main {
     //http://www.baeldung.c om/jackson-xml-serialization-and-deserialization
     public static void main(String[] args) throws Exception {
         CancionAlmacenaje almacenaje = new CancionAlmacenaje();
+        UsuarioAlmacenaje almaceajeUsuario = new UsuarioAlmacenaje();
 
 
         /**Definicion del ServerSocket*/
@@ -42,6 +44,7 @@ public class Main {
                 PrintWriter printWriter = new PrintWriter(clienteSocket.getOutputStream(), true);
                 System.out.println(mensaje.OpCod + "code");
 
+
                 if (mensaje.OpCod.equals("01")) {
                     /**Almacenar Cancion*/
                     int num = 0;
@@ -56,13 +59,17 @@ public class Main {
                 } else if (mensaje.OpCod.equals("02")) {
                     /**Almacena un usuario*/
                     System.out.println("entro");
-                    System.out.println(mensaje.usuario.nombre);
-                    System.out.println(mensaje.usuario.apellido);
-                    System.out.println(mensaje.usuario.edad);
-                    System.out.println(mensaje.usuario.id);
-                    System.out.println(mensaje.usuario.password);
+                    almaceajeUsuario.addUsuarioEntrante(mensaje.usuario);
 
 
+                } else if (mensaje.OpCod.equals("022")) {
+                    System.out.println("entro");
+                   
+
+                    if (almaceajeUsuario.find(mensaje.usuario.nickName, mensaje.usuario.password) == true) {
+                        printWriter.print("1");
+                    }
+                    printWriter.close();
                 } else if (mensaje.OpCod.equals("03")) {
                     AddDatoMensaje enviarDatin = new AddDatoMensaje();
 
@@ -120,10 +127,9 @@ public class Main {
                     almacenaje.bubbleSort();
                 } else if (mensaje.OpCod.equals("8.2")) {
                     almacenaje.QuickSort();
-                }else if (mensaje.OpCod.equals("8.3")) {
+                } else if (mensaje.OpCod.equals("8.3")) {
                     almacenaje.RadixSort();
-                }
-                else {
+                } else {
                     System.out.print("whut");
                 }
                 clienteSocket.close();

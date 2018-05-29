@@ -1,0 +1,97 @@
+[ {
+  "nickName" : "Kevinfgn",
+  "password" : "d55ad283aa400af464c76d713c07ad",
+  "nombre" : "Kevin",
+  "apellido" : "Guzman",
+  "edad" : "20",
+  "hojaIzquierda" : {
+    "nickName" : "Jd2004",
+    "password" : "c66c0f148de9519b8bd264312c4d64",
+    "nombre" : "Juan Diego",
+    "apellido" : "Guzman",
+    "edad" : "13",
+    "hojaIzquierda" : null,
+    "hojaDerecha" : null
+  },
+  "hojaDerecha" : {
+    "nickName" : "cintnav",
+    "password" : "22cbee172258880fd316cb2b0cd2ed",
+    "nombre" : "Cinthya",
+    "apellido" : "Navarro",
+    "edad" : "35",
+    "hojaIzquierda" : null,
+    "hojaDerecha" : {
+      "nickName" : "leahycarlos21",
+      "password" : "578edf8458ce06fbc5bb76a58c5ca4",
+      "nombre" : "Carlos",
+      "apellido" : "Leahy",
+      "edad" : "21",
+      "hojaIzquierda" : null,
+      "hojaDerecha" : {
+        "nickName" : "vmcc",
+        "password" : "2cb962ac59075b964b07152d234b70",
+        "nombre" : "Valeria",
+        "apellido" : "Campos",
+        "edad" : "20",
+        "hojaIzquierda" : null,
+        "hojaDerecha" : null
+      }
+    }
+  }
+}, {
+  "nickName" : "Jd2004",
+  "password" : "c66c0f148de9519b8bd264312c4d64",
+  "nombre" : "Juan Diego",
+  "apellido" : "Guzman",
+  "edad" : "13",
+  "hojaIzquierda" : null,
+  "hojaDerecha" : null
+}, {
+  "nickName" : "cintnav",
+  "password" : "22cbee172258880fd316cb2b0cd2ed",
+  "nombre" : "Cinthya",
+  "apellido" : "Navarro",
+  "edad" : "35",
+  "hojaIzquierda" : null,
+  "hojaDerecha" : {
+    "nickName" : "leahycarlos21",
+    "password" : "578edf8458ce06fbc5bb76a58c5ca4",
+    "nombre" : "Carlos",
+    "apellido" : "Leahy",
+    "edad" : "21",
+    "hojaIzquierda" : null,
+    "hojaDerecha" : {
+      "nickName" : "vmcc",
+      "password" : "2cb962ac59075b964b07152d234b70",
+      "nombre" : "Valeria",
+      "apellido" : "Campos",
+      "edad" : "20",
+      "hojaIzquierda" : null,
+      "hojaDerecha" : null
+    }
+  }
+}, {
+  "nickName" : "leahycarlos21",
+  "password" : "578edf8458ce06fbc5bb76a58c5ca4",
+  "nombre" : "Carlos",
+  "apellido" : "Leahy",
+  "edad" : "21",
+  "hojaIzquierda" : null,
+  "hojaDerecha" : {
+    "nickName" : "vmcc",
+    "password" : "2cb962ac59075b964b07152d234b70",
+    "nombre" : "Valeria",
+    "apellido" : "Campos",
+    "edad" : "20",
+    "hojaIzquierda" : null,
+    "hojaDerecha" : null
+  }
+}, {
+  "nickName" : "vmcc",
+  "password" : "2cb962ac59075b964b07152d234b70",
+  "nombre" : "Valeria",
+  "apellido" : "Campos",
+  "edad" : "20",
+  "hojaIzquierda" : null,
+  "hojaDerecha" : null
+} ]

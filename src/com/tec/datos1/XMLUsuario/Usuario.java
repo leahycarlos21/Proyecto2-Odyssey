@@ -2,7 +2,7 @@ package com.tec.datos1.XMLUsuario;
 
 
 public class Usuario {
-    public String id;
+    public String nickName;
     public String password;
     public String nombre;
     public String apellido;
@@ -11,8 +11,8 @@ public class Usuario {
     public Usuario hojaDerecha;
 
 
-    public Usuario(String id, String password, String nombre, String apellido, String edad){
-        this.id = id;
+    public Usuario(String nickName, String password, String nombre, String apellido, String edad){
+        this.nickName = nickName;
         this.password = password;
         this.nombre = nombre;
         this. apellido = apellido;
@@ -22,12 +22,20 @@ public class Usuario {
 
     }
 
-    public String getId() {
-        return id;
+    public Usuario(String id){
+        this.nickName= id;
+
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getNickName() {
+
+        return nickName;
+    }
+
+    public void setNickName(String nickName)
+
+    {
+        this.nickName = nickName;
     }
 
     public String getPassword() {
@@ -61,13 +69,20 @@ public class Usuario {
     public void setEdad(String edad) {
         this.edad = edad;
     }
+
     public Usuario getHojaIzquierda() {
         return hojaIzquierda;
+    }
+
+    public void setHojaIzquierda(Usuario hojaIzquierda) {
+        this.hojaIzquierda = hojaIzquierda;
     }
 
     public Usuario getHojaDerecha() {
         return hojaDerecha;
     }
 
-
+    public void setHojaDerecha(Usuario hojaDerecha) {
+        this.hojaDerecha = hojaDerecha;
+    }
 }
